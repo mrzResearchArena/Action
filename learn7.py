@@ -91,21 +91,38 @@ y = np.array([
     [50, 60],
 ])
 
-def dotOwn(x, y):
-    assert x.shape[1] == y.shape[0], 'Check matrix dimension'
-
-    x = x.copy()
-    y = y.copy()
-
-    result = np.empty(shape=(x.shape[0], y.shape[1]))
-
-    for row in range(x.shape[0]):
-        for column in range(y.shape[1]):
-            result[row, column] = np.sum(x[row,:] * y[:,column])
-
-    return result
-
-print(dotOwn(x, y))
-
+# def dotOwn(x, y):
+#     assert x.shape[1] == y.shape[0], 'Check matrix dimension'
+#
+#     x = x.copy()
+#     y = y.copy()
+#
+#     result = np.empty(shape=(x.shape[0], y.shape[1]))
+#
+#     for row in range(x.shape[0]):
+#         for column in range(y.shape[1]):
+#             result[row, column] = np.sum(x[row,:] * y[:,column])
+#
+#     return result
+#
+# print(dotOwn(x, y))
+#
 # print(np.sum(np.array([1, 2, 3] * np.array([10, 30, 50]))))
+#
 
+def tp(v):
+    v = v.copy()
+    result = np.zeros(shape=(v.shape[1], v.shape[0]))
+
+    for row in v:
+        print(row)
+
+v = np.array([
+    [10, 20, 30],
+    [5,  10, 15],
+])
+print(tp(v))
+
+import pydicom as v
+
+print(v.__version__)
