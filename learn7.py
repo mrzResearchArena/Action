@@ -124,5 +124,3 @@ v = np.array([
 print(tp(v))
 
 import pydicom as v
-
-print(v.__version__)
